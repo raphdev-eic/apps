@@ -254,7 +254,11 @@
                     <!-- user login dropdown start-->
                     <li class="dropdown">
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                            <img alt="" src="holder.js/29x29">
+                            <?php if (!$this->Session->check('Auth.User.Avatar.0.url')): ?>
+                               <?php echo $this->Html->image('http://dummyimage.com/29x29/bbb/05071f.png&text=avatar'); ?>
+                            <?php else: ?>
+                               <?php echo $this->Image->resize($this->Session->read('Auth.User.Avatar.0.url'),29,29); ?>
+                           <?php endif; ?>
                             <span class="username"><?php echo $this->Session->read('Auth.User.User.username'); ?></span>
                             <b class="caret"></b>
                         </a>
