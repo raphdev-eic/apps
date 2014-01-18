@@ -6,7 +6,7 @@
     <?php echo $this->Html->meta('description','eic corporation app , service eic, platform eic , ivoire invest'); ?>
     <?php echo $this->Html->meta('author','eic corporation'); ?>
     <?php echo $this->Html->meta('keyword','dashboard eic corporation, platform'); ?>
-    <?php echo $this->Html->meta('favicon.ico','/img/favicon.png',array('type' => 'icon')); ?> 
+    <?php echo $this->Html->meta('favicon.ico','/img/favicon.png',array('type' => 'icon')); ?>
     <title>Apps Services | EiC Corporation</title>
 
     <!-- Bootstrap core CSS -->
@@ -35,7 +35,7 @@
               <div data-original-title="Services EiC corporation" data-placement="right" class="tooltips"> <?php echo $this->Html->image('icon.png');?></div>
           </div>
           <!--logo start-->
-          <a href="http://www." class="logo" >EiC <span>Corporation</span></a>
+          <a href="http://www.eic-corporation.com" class="logo" >EiC <span>Corporation</span></a>
           <!--logo end-->
          <?php if($this->Session->check('Auth')): ?>
           <div class="nav notify-row" id="top_menu">
@@ -247,32 +247,32 @@
           <?php endif; ?>
           <div class="top-nav">
              <?php if($this->Session->check('Auth.User.User.id')): ?>
-              <ul class="nav pull-right top-menu">
-                  <li>
-                      <input type="text" class="form-control search" placeholder="Search">
-                  </li>
-                  <!-- user login dropdown start-->
-                  <li class="dropdown">
-                      <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                          <img alt="" src="holder.js/29x29">
-                          <span class="username"><?php echo $this->Session->read('Auth.User.User.username'); ?></span>
-                          <b class="caret"></b>
-                      </a>
-                      <ul class="dropdown-menu extended logout">
-                          <div class="log-arrow-up"></div>
-                          <li><a href="#"><i class=" icon-suitcase"></i>Profile</a></li>
-                          <li><a href="#"><i class="icon-cog"></i> Parametres</a></li>
-                          <li><a href="#"><i class="icon-bell-alt"></i> Notifications</a></li>
-                          <li><a href="<?php echo $this->Html->url(array('controller'=>'Users','action'=>'logout')); ?>"><i class="icon-key"></i> Deconnexion</a></li>
-                      </ul>
-                  </li>
-                  <!-- user login dropdown end -->
-              </ul>
+                <ul class="nav pull-right top-menu">
+                    <li>
+                        <input type="text" class="form-control search" placeholder="Search">
+                    </li>
+                    <!-- user login dropdown start-->
+                    <li class="dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <img alt="" src="holder.js/29x29">
+                            <span class="username"><?php echo $this->Session->read('Auth.User.User.username'); ?></span>
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu extended logout">
+                            <div class="log-arrow-up"></div>
+                            <li><a href="#"><i class=" icon-suitcase"></i>Profile</a></li>
+                            <li><a href="#"><i class="icon-cog"></i> Parametres</a></li>
+                            <li><a href="#"><i class="icon-bell-alt"></i> Notifications</a></li>
+                            <li><a href="<?php echo $this->Html->url(array('controller'=>'Users','action'=>'logout')); ?>"><i class="icon-key"></i> Deconnexion</a></li>
+                        </ul>
+                    </li>
+                    <!-- user login dropdown end -->
+                </ul>
               <?php else:  ?>
-              <ul class="nav pull-right top-menu">
-                <a href="http://www.accounts.eic-corporation.com" class="btn btn-info"> Connexion</a>
-              </ul>
-            <?php endif; ?>
+                <ul class="nav pull-right top-menu">
+                  <a href="<?php echo Configure::read('accounts'); ?>" class="btn btn-info"> Connexion</a>
+                </ul>
+              <?php endif; ?>
           </div>
       </header>
       <!--header end-->
